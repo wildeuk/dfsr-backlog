@@ -1,0 +1,3 @@
+# Input RG:RF:SM:RM names below, one per line, in the format ReplicationGroup:Replicated Folder:Sending Member:Receiving Member (i.e. UK Replication Group:London Data:LON-FS01:LON-FS02)
+Replication Group Name:Share Name:Sending Member:Receiving Member
+Replication Group Name:Share Name:Sending Member:Receiving Member
