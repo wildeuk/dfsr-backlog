@@ -20,7 +20,7 @@ $Now = Get-Date -Format FileDateTimeUniversal
 Function ReadRFList
 {
     [cmdletbinding()]
-    Param 
+    Param
     (
         [string]$InputFile
     )
@@ -28,10 +28,10 @@ Function ReadRFList
     {
         [array]$RFList = @()
     }
-    Process 
+    Process
     {
         $input_array = (Get-Content $InputFile) -notmatch '^#' # Read lines in from input file, ignoring commented lines
-        Foreach ($line in $input_array) 
+        Foreach ($line in $input_array)
         {
             $line_split = $line | ConvertFrom-String -PropertyNames val1, val2, val3, val4 -Delimiter ":" # Split input lines at the ':' character, then store individual parts of the line in variables
             $replication_group = $line_split.val1
